@@ -1,8 +1,11 @@
 // tailwind.config.js
 
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'], // Path untuk proses purging CSS
-  darkMode: false, // Atur ke 'media' atau 'class' untuk mode gelap
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Menyesuaikan dengan struktur proyek Anda
+    './public/index.html',
+  ],
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {

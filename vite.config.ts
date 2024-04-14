@@ -1,12 +1,14 @@
-// vite.config.ts
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  define: {
-    'process.env': process.env,
+  optimizeDeps: {
+    include: [
+      '@mui/icons-material/Add',
+      '@mui/icons-material/Remove',
+      // Daftar modul lain yang Anda perlukan
+    ],
   },
 });
 
